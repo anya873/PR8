@@ -12,7 +12,8 @@ namespace Shop_Shapovalova.Classes
         public int Price { get; set; }
         public Shop(string Name, int Price)
         {
-
+            this.Name = Name;
+            this.Price = Price;
         }
     }
 }
