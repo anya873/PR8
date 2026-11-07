@@ -20,9 +20,18 @@ namespace Shop_Shapovalova
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<object> AllItems = Classes.RepoItems.AllItems();
         public MainWindow()
         {
             InitializeComponent();
+            CreateUI();
+        }
+        public void CreateUI()
+        {
+            foreach(object Item in AllItems)
+            {
+                parent.Children.Add(new Elements.Item(Item));
+            }
         }
     }
 }
