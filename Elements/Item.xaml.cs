@@ -36,6 +36,11 @@ namespace Shop_Shapovalova.Elements
                 Classes.Sport SportData = ItemData as Classes.Sport;
                 tb_Characteristic.Content = "Размер: " + SportData.Size;
             }
+            if(ItemData is Classes.Electronic)
+            {
+                Classes.Electronic ElectronicData = ItemData as Classes.Electronic;
+                tb_Characteristic.Content = "Ёмкость аккумулятора: " + ElectronicData.Accum + "\n" + "Скорость: " + ElectronicData.Speed;
+            }
         }
     }
 }
