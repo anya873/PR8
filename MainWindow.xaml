@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="199*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="757*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Найти" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="text1" Margin="10,6,597,6" Grid.Column="1"/>
+        <Button Content="Поиск" Click="Search" RenderTransformOrigin="1.805,0.557" Grid.Column="1" Margin="172,6,507,10"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="2" Margin="0,10,0,0" Grid.Row="1">
             <StackPanel x:Name="parent" Orientation="Horizontal">
-                
+
             </StackPanel>
         </ScrollViewer>
     </Grid>
